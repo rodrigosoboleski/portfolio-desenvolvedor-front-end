@@ -429,7 +429,9 @@ div.skill-icon {
 
 @media (max-width: 550px) {
     body {
-        background-color: #000000;
+        background-color: #121212;
+        background-image: none; /* Remove a imagem de fundo */
+        backdrop-filter: none; /* Remove o efeito de filtro */
     }
 
     #container {
