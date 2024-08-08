@@ -33,41 +33,11 @@ body {
     max-width: 1000px;
 }
 
-/*HEADER===================================================*/
-header {
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(190, 190, 190, 0.233);
-    color: #121212;
-    border-radius: 10px;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    padding: 2px;
-}
-
-.social img {
-    width: 60%;
-}
-
-.social:hover {
-    background-color: #000000;
-    box-shadow: 0px 0px 10px #646464;
-    transition: 0.3s ease-in-out;
-
-}
-
 /*APRESENTAÇÃO COM EMOJI =================================*/
 section.apresentacao {
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 div.imagem-perfil {
@@ -109,7 +79,7 @@ section#sobre {
 }
 
 section#sobre div {
-    height: 330px;
+    min-height: 300px;
     border-radius: 50px;
 }
 
@@ -268,20 +238,18 @@ div.texto-sobre p {
 
     .area-projetos .ver-mais {
         position: absolute;
-        top: 85%;
-        left: 45%;
+        top: 50%;
+        left: 48%;
         transform: translate(-50%, -50%);
     }
 }
 
-/*CONTATO======================================================*/
-footer {
+/*CONTATO======================================================*/footer {
     display: grid;
     grid-template-columns: 2.1fr 0.9fr;
     grid-column-gap: 20px;
 }
 
-/*===CARD.01===*/
 div.card-skills {
     background: linear-gradient(90deg, rgba(53, 53, 53, 0.30) 0%, rgba(78, 78, 78, 0.30) 90%);
     color: white;
@@ -309,10 +277,9 @@ div.card-skills p {
 div.skills {
     height: 160px;
     display: flex;
-
     padding-left: 50px;
     align-items: center;
-    margin: auto;
+    gap: 5px;
 }
 
 div.skill-icon {
@@ -332,14 +299,12 @@ div.skill-icon {
     width: 70%;
 }
 
-/*===CARD.02===*/
 .card-contato {
     background: url(imagens/emoji/3.mac-book.png) center no-repeat;
     height: 100%;
-    background-position-y: 40px;
+    background-position-y: 45px;
     background-position-x: 70px;
     background-size: 350px;
-
 }
 
 .card-contato h3 {
@@ -356,7 +321,6 @@ div.skill-icon {
 }
 
 .botao-contato {
-    width: 100px;
     margin: 30px 40px;
     display: flex;
     flex-direction: column;
@@ -366,8 +330,104 @@ div.skill-icon {
 .botao-contato img {
     width: 60%;
 }
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(190, 190, 190, 0.233);
+    color: #121212;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    padding: 2px;
+}
 
-@media (max-width: 480px) {
+.social img {
+    width: 60%;
+}
+
+.social:hover {
+    background-color: #000000;
+    box-shadow: 0px 0px 10px #646464;
+    transition: 0.3s ease-in-out;
+
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    #container {
+        padding: 0 20px;
+    }
+    section#sobre {
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+    #sobre .texto-sobre{
+        padding-bottom: 20px;
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Coloca os elementos em uma única coluna */
+    }
+
+    div.card-skills {
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
+
+    div.card-skills h2 {
+        font-size: 30px; /* Reduz o tamanho da fonte */
+        margin: 20px 20px 10px;
+    }
+
+    div.card-skills p {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        margin: 0 20px;
+    }
+
+    div.skills {
+        flex-wrap: wrap;
+        flex-direction: column; /* Alinha os ícones de skills em uma coluna */
+        padding: 20px;
+    }
+
+    div.skill-icon {  
+        width: 80px; /* Reduz o tamanho dos ícones */
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: 10px; /* Adiciona espaço entre os ícones */
+    }
+
+    .card-contato {
+        background-size: 250px; /* Ajusta o tamanho do background */
+        background-position-y: -25px;
+        background-position-x: 100%;
+    }
+
+    .card-contato h3 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+
+    .card-contato p {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+
+    .botao-contato {
+        flex-direction: row;
+        width: 80px; /* Reduz o tamanho do botão */
+        margin: 20px 5%;
+    }
+
+    .botao-contato img {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 550px) {
     body {
         background-color: #000000;
     }
@@ -445,68 +505,67 @@ div.skill-icon {
         display: none;
     }
 
-    /* Ajustes para o footer */
     footer {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
     }
 
-    /* Ajustes para a div .card-skills */
     .card-skills {
-        padding: 20px;
+        padding: 10px;
         text-align: center;
         height: auto;
     }
 
     .card-skills h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
     }
 
     .card-skills p {
-        background-color: red;
-        margin: 0;
-        text-align: none;
+        font-size: 0.9rem;
+    }
+    .skills{
+        border-radius: 0px;
+    }
+    .skill-icon{
+        border-radius: 0px;
     }
 
-    .skills {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .skill-icon {
-        margin: 10px;
-        width: 50px;
-        height: 50px;
-    }
-
-    /* Ajustes para a div .card-contato */
     .card-contato {
         background-size: 80%;
         text-align: center;
-        padding: 20px;
-        background-position-y: 0px;
+        background-position-y: 70px;
         background-position-x: center;
+        height: 300px;
     }
 
     .card-contato h3 {
         font-size: 1.5rem;
-        margin: 0;
+        margin-top: 20px;
         text-align: center;
     }
-
     .card-contato p {
-        font-size: 1rem;
-        margin-bottom: 5px;
+        font-size: 0.9rem;
+        text-align: center;
+        margin-left: 10px;
     }
-
     .botao-contato {
-        width: 80px;
-        margin: 20px auto;
-        /* Centraliza a seção de botões */
+        width: 100%;
+        justify-content: center;
+        margin: 10px auto;
+        display: flex;
     }
-
-    .botao-contato img {
-        width: 50%;
+    .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(190, 190, 190, 0.233);
+        color: #121212;
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    .social img {
+        width: 60%;
     }
 }
