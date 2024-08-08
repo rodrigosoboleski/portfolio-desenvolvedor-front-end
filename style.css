@@ -355,7 +355,12 @@ div.skill-icon {
 }
 
 /* Responsivo para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 840px) {
+    body{
+        background-color: #121212;
+        background-image: none; /* Remove a imagem de fundo */
+        backdrop-filter: none; /* Remove o efeito de filtro */
+    }
     #container {
         padding: 0 20px;
     }
