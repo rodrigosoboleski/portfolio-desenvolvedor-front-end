@@ -6,12 +6,17 @@ body{
 section{
     justify-content: center;
     text-align: center;
-    width: 90%;
+    width: 500px;
     margin: 110px auto;
     background: linear-gradient(0deg, rgb(34, 117, 195, 0.575) 0%, rgba(59, 45, 253, 0.575) 90%);
     border-radius: 50px;
     box-shadow: 0px 0px 15px rgba(34, 117, 195, 0.5);
     padding: 10px;
+}
+@media (max-width: 550px) {
+    section{
+        width: 70%;
+    }
 }
 
 .emoji{
