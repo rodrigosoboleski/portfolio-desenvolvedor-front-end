@@ -6,7 +6,7 @@ body{
 section{
     justify-content: center;
     text-align: center;
-    width: 500px;
+    width: 90%;
     margin: 110px auto;
     background: linear-gradient(0deg, rgb(34, 117, 195, 0.575) 0%, rgba(59, 45, 253, 0.575) 90%);
     border-radius: 50px;
